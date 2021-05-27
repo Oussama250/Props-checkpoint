@@ -1,21 +1,21 @@
 import React from "react";
 
 
-const profile = (props) => {
-    const handleAlert = e => console.log(props.fonction("aaa"));
-    //const handleAlert = e => props.fonction("Oussama250");
+const profile = ({fullName, bio, profession, fonction, children}) => {
+    // const handleAlert = e => console.log(typeof fullName);
+    const handleAlert = e => fonction(fullName);
 
     return (    
     <div>
-        <img src={props.children} alt="user.png" />
+        <img src={children} alt="user.png" />
         <p>
-            {props.fullName}
+            {fullName}
         </p>
         <p>
-            {props.bio}
+            {bio}
         </p>
         <p>
-            {props.profession}
+            {profession}
         </p>
         <div>
             <button onClick={handleAlert} style={{ width: '50%', height: '30px', border: 'solid 2px', borderRadius: '3px', fontSize: '12' }} >

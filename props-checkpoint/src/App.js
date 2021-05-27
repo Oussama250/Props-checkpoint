@@ -5,11 +5,11 @@ import image from '../src/profile/user.png';
 
 function App() {
 
-  const handleName = (fullName) => alert("name of the user is " + {fullName});
+  const handleName = (fullName) => alert(`name of the user is ${fullName}`);
 
   return (
     <div className="App">
-      <Profile fullName = "Oussama Beddiaf" bio = "Computer science enginier" profession = "Developer" fonction = "handleName">{image}</Profile>
+      <Profile fullName = "Oussama Beddiaf" bio = "Computer science enginier" profession = "Developer" fonction = {handleName}>{image}</Profile>
     </div>
   );
 }
